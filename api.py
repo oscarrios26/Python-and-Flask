@@ -204,7 +204,7 @@ GAMES175 = Games(name="Zoo Tycoon", sales=1, release="Oct-01", genre="Business s
 
 
 
-# GAMES1.save() 
+ GAMES1.save() 
 # GAMES2.save() 
 # GAMES3.save() 
 # GAMES4.save() 
