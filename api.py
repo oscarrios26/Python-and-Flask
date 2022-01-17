@@ -381,19 +381,17 @@ GAMES174.save()
 GAMES175.save()
 
 app = Flask(__name__)
-
+@app.route('/')
+def index():
+    return 'Welcome'
 @app.route('/games', methods=['GET'])
 @app.route('/games/<id>', methods=['GET'])
-@app.route('/games/<name>', methods=['GET'])
-def games(id=None, name=None):
+
+def games(id=None, game=None):
     if id:
         games = Games.get(Games.id == id)
         games = model_to_dict(games)
         return jsonify(games)
-    if name:
-        title = Games.get(Games.name == name)
-        title = model_to_dict(title)
-        return jsonify(title)   
     else:
         game = []
         for games in Games.select():
@@ -402,6 +400,3 @@ def games(id=None, name=None):
 
 
 app.run(port=9000, debug=True)
-
-
-
