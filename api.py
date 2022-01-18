@@ -1,3 +1,6 @@
+
+
+
 from flask import Flask
 from flask import request
 from flask import jsonify
@@ -207,12 +210,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Welcome'
+    
+    return 'Welcome to my games API'
 @app.route('/games', methods=['GET'])
 @app.route('/games/<id>', methods=['GET'])
 
+
 def games(id=None, game=None):
-    if id:
+  if request.method == 'GET':
+    while id:
         games = Games.get(Games.id == id)
         games = model_to_dict(games)
         return jsonify(games)
@@ -222,5 +228,14 @@ def games(id=None, game=None):
             game.append(model_to_dict(games))
         return jsonify(game)
 
+@app.route('/games/names/<name>', methods=['GET'])
+def name(name=None):
+    if name:
+        name = Games.get(Games.name == name)
+        name = model_to_dict(name)
+        return jsonify(name) 
 
-app.run(port=9000, debug=True)
+
+
+app.run(port=9020, debug=True)
+
