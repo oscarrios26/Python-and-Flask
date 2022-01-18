@@ -13,6 +13,7 @@ class Games(BaseModel):
     genre = CharField()
     developer = CharField()
     publisher = CharField()
+ ```   
 
 <h3>API Snippet</h3>
 
