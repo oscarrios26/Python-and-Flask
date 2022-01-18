@@ -1,4 +1,18 @@
 <h1>Python and Flask</h1>
+<h3>Model</h3>
+
+```
+class BaseModel(Model):
+    class Meta:
+        database = db
+
+class Games(BaseModel):
+    name = CharField()
+    sales = IntegerField()
+    release = CharField()
+    genre = CharField()
+    developer = CharField()
+    publisher = CharField()
 
 <h3>API Snippet</h3>
 
