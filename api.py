@@ -244,5 +244,14 @@ def genre(genre=None):
         while genre:    
             return jsonify(genrer)
 
+@app.route('/games/developer/<developer>', methods=['GET'])
+def developer(developer=None):
+    if developer:
+        developerr = []
+        for dev in Games.select().where(Games.developer == developer):
+            developerr.append(model_to_dict(dev))
+        while developer:    
+            return jsonify(developerr)
+
 app.run(port=9020, debug=True)
 
