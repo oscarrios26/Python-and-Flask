@@ -24,6 +24,7 @@
 
 
 ```
+<h3>Routes</h3>
 ```
 home route = '/'
 games route = '/games'
