@@ -25,10 +25,10 @@
 
 ```
 ```
-home route '/'
-games route '/games'
-games ID route '/games/<id>'
-games name route '/games/names/<name>'
-games genre route '/games/genre/<genre>'
-games developer route '/games/developer/<developer>'
-games publisher route '/games/publisher/<publisher>'
+home route = '/'
+games route = '/games'
+games ID route = '/games/<id>'
+games name route = '/games/names/<name>'
+games genre route = '/games/genre/<genre>'
+games developer route = '/games/developer/<developer>'
+games publisher route = '/games/publisher/<publisher>'
