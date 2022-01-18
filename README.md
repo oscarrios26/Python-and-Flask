@@ -1,6 +1,7 @@
 <h1>Python and Flask</h1>
 
-```{
+```
+{
 "developer": "id Software",
 "genre": "First-person shooter",
 "id": 69,
