@@ -8,4 +8,4 @@
 "publisher": "GT Interactive",
 "release": "Sep-94",
 "sales": 2
-},```
+}
