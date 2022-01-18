@@ -1,6 +1,7 @@
 <h1>Python and Flask</h1>
 
 ```
+<h3>API Snippet</h3>
 {
 "developer": "id Software",
 "genre": "First-person shooter",
