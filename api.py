@@ -253,5 +253,16 @@ def developer(developer=None):
         while developer:    
             return jsonify(developerr)
 
+@app.route('/games/publisher/<publisher>', methods=['GET'])
+def publisher(publisher=None):
+    if publisher:
+        publi = []
+        for pub in Games.select().where(Games.publisher == publisher):
+            publi.append(model_to_dict(pub))
+        while publisher:    
+            return jsonify(publi)            
+
+
+
 app.run(port=9020, debug=True)
 
