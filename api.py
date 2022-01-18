@@ -235,7 +235,14 @@ def name(name=None):
         name = model_to_dict(name)
         return jsonify(name) 
 
-
+@app.route('/games/genre/<genre>', methods=['GET'])
+def genre(genre=None):
+    if genre:
+        genrer = []
+        for gen in Games.select().where(Games.genre == genre):
+            genrer.append(model_to_dict(gen))
+        while genre:    
+            return jsonify(genrer)
 
 app.run(port=9020, debug=True)
 
