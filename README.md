@@ -1,4 +1,6 @@
 <h1>Python and Flask</h1>
+Built in Python and Flask, use a SQL database with PeeWee models
+
 <h3>Model</h3>
 
 ```
